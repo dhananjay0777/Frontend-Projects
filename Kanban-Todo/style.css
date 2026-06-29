@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Gilroy', sans-serif;
+}
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+}
+
+:root{
+     
+     
+    /* --background-color: #121212;
+    --text-color: #EAEAEA;
+    --bg-button-color: #2C2C2C;
+    --bg-task-color: #1E1E1E;
+    --delete-button-color: #E53935; Red */
+      
+    
+ --background-color: #000000;
+--bg-task-color: #101010;
+--bg-button-color: #1B1B1B;
+--text-color: #FAFAFA;
+--delete-button-color: #FF3B30;
+
+    /* Padding Variable */ 
+    --nav-padding : 15px 30px;
+    --section-padding : 15px 30px;
+    --padding-s : 5px;
+    --padding-m : 10px;
+    --padding-l : 15px;
+    --padding-xl : 20px;
+    --padding-xxl : 30px;
+
+
+    /* Border Radius Variables */
+    --border-radius-s: 5px;
+    --border-radius-m: 10px;
+    --border-radius-l: 15px;
+    --border-radius-xl: 20px;
+    --border-radius-xxl: 30px;
+
+    --border-color : 
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+nav{
+    padding: var(--nav-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-task-color);
+}
+.task-column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+nav button{
+    border: none;
+    color: var(--text-color);
+    outline: none;
+    background-color: var(--bg-button-color);
+    padding: var(--padding-m) var(--padding-l);
+    cursor: pointer;
+    border-radius: var(--border-radius-m);
+}
+
+section{
+    flex-grow: 1;
+    /* background-color: red; */
+    padding: var(--section-padding);
+    display: flex;
+    gap : var(--padding-xxl);
+    justify-content: space-between;
+}
+section .task-column{
+    background-color:  var(--bg-button-color);
+    flex-grow: 1;
+    width: 100%;
+    padding: var(--padding-m);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius-m);
+    transition: all 0.7s cubic-bezier(0.19,1,0.22,11);
+}
+
+section .task-column.hover-over{
+    border: 2px dashed var(--text-color);
+    scale: 1.05;
+
+}
+
+section .task-column .headding{
+    width: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-l);
+}
+section .task-column .task{
+    background-color: var(--bg-task-color);
+    padding: var(--padding-m);
+    border-radius: var(--border-radius-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-s);
+    cursor: grab;
+}
+
+section .task-column .task button{
+    align-self: flex-end;
+    cursor: pointer;
+    border-radius: var(--border-radius-m);
+    padding: var(--padding-s) var(--padding-m);
+    border: none;
+    outline: none;
+    background-color: var(--delete-button-color);
+    color: var(--text-color);
+}
+
+.modal{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal.active{
+    display: flex;
+}
+.modal .center{
+    background-color: var(--bg-button-color);
+    padding: var(--padding-xxl);
+    border-radius: var(--border-radius-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-l);
+    z-index: 10;
+}
+.modal .center input,.modal .center textarea, .modal .center select{
+    background-color: var(--bg-task-color);
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    padding: var(--padding-m);
+    border-radius: var(--border-radius-m);
+}
+.modal .center button{
+    background-color: var(--bg-task-color);
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    padding: var(--padding-m) var(--padding-l);
+    cursor: pointer;
+    border-radius: var(--border-radius-l);
+    width: fit-content;
+    align-self: center;
+}
+.modal .bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(62, 62, 68, 0.361);
+    backdrop-filter: blur(1.8px);
+}
+.close{
+        z-index: 10;
+    position: absolute;
+    top: 95%;
+    opacity: 20%;
+}
