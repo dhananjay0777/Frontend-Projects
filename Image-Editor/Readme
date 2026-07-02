@@ -1,0 +1,67 @@
+#  Image Editor
+
+A simple image editor built with **HTML, CSS, and JavaScript**. It lets you upload an image, adjust filters in real time, apply presets, and download the edited image directly from your browser.
+
+## Features
+
+* Upload images from your device
+* Adjust filters with sliders
+
+  * Brightness
+  * Contrast
+  * Saturation
+  * Hue Rotation
+  * Blur
+  * Grayscale
+  * Sepia
+  * Opacity
+  * Invert
+* Apply built-in filter presets
+* Reset all filters with one click
+* Download the edited image
+* Clean and responsive interface
+
+## Tech Stack
+
+* HTML
+* CSS
+* JavaScript
+* HTML5 Canvas API
+
+## Getting Started
+
+1. Clone the repository.
+
+```bash
+git clone https://github.com/your-username/image-editor.git
+```
+
+2. Open the project folder.
+
+3. Open `index.html` in your browser.
+
+That's it—no installation or dependencies are required.
+
+## Project Structure
+
+```text
+image-editor/
+├── index.html
+├── style.css
+├── theme.css
+├── script.js
+└── README.md
+```
+
+## Future Improvements
+
+* Crop and resize tools
+* Rotate and flip
+* Undo/Redo
+* Before/After comparison
+* More filter presets
+* Drag and drop image upload
+
+## License
+
+This project is open source and available under the MIT License.
